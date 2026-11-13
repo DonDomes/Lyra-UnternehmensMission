@@ -1,0 +1,3412 @@
+{
+  "id": "lyra-unternehmensmission-rewe1-skr04-m01-m09",
+  "revision": 1,
+  "title": "LYRA - UnternehmensMission",
+  "subtitle": "BüroWerk e.K.: Das erste Geschäftsjahr",
+  "version": "1.0.0",
+  "targetMinutes": "90–120",
+  "chapters": [
+    {
+      "id": "ankunft",
+      "title": "Das BüroWerk erwacht",
+      "subtitle": "Montag, 08:10 | Eingangspost und neue Buchhaltung",
+      "room": "lobby",
+      "npc": "Mira",
+      "intro": "BüroWerk e.K. wurde als fiktives Handelsunternehmen gegründet. Die ersten Belege treffen ein. Mira bittet dich, die neue Buchhaltung von Anfang an nachvollziehbar aufzubauen.",
+      "goal": "Trenne Belege, Geschäftsvorfälle und Zuständigkeiten – ohne die Finanzbuchhaltung mit Controlling zu verwechseln.",
+      "minutes": 12,
+      "tasks": [
+        {
+          "id": "ankunft-01",
+          "type": "inspect",
+          "title": "Drei Fundstücke auf dem Schreibtisch",
+          "prompt": "Öffne die drei Unterlagen. Sie sind die Ausgangslage für das gesamte Lernspiel.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Unternehmensakte",
+              "body": "BüroWerk e.K. ist ein fiktives Einzelunternehmen, das Büroausstattung verkauft und Einrichtungsleistungen erbringt. Alle Beträge sind vereinfachte Unterrichtsannahmen. Es gilt SKR04; Angaben zu Steuer und Sonderfällen werden in den jeweiligen Missionen ergänzt.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Nachricht von Mira",
+              "body": "Wir wollen jede wirtschaftliche Bewegung durch einen geeigneten Beleg nachvollziehen. Bei unbekannten Sachverhalten wird nicht blind gebucht. Du prüfst und erläuterst die Vorgänge; ich entscheide über größere Ausgaben.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Werkregel",
+              "body": "Die Missionen zeigen einzelne, voneinander abgegrenzte Übungsfälle. Nicht jeder Betrag aus einem Kapitel gehört zur fortlaufenden Unternehmensbilanz. Nur ausdrücklich verbundene Vorgänge dürfen zusammengezogen werden.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "ankunft-02",
+          "type": "dialogue",
+          "title": "Dein Schwerpunkt in der Buchhaltung",
+          "prompt": "Mira: „Worauf wirst du besonders achten? Deine Entscheidung begleitet dich in der Schlussrunde.“",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Wähle einen Weg und lies die Antwort der Figur.",
+          "explanation": "Alle angebotenen Gesprächswege sind als Lernentscheidung zulässig. Die fachliche Bewertung findet nicht während des Spiels statt.",
+          "points": 0,
+          "options": [
+            {
+              "id": "w0",
+              "text": "Jeder Vorgang muss durch einen Beleg nachprüfbar bleiben.",
+              "reply": "Mira: „Gut. Dann prüfe zuerst, welcher Beleg tatsächlich vorliegt. Nicht jede Bankbewegung erklärt schon den Geschäftsvorfall.“",
+              "flag": "weg0"
+            },
+            {
+              "id": "w1",
+              "text": "Offene Rechnungen und Zahlungen müssen aufgehen.",
+              "reply": "Mira: „Dann denke an Personenkonten und OPOS. Die Abrechnung kommt später; vorher muss der Beleg richtig zugeordnet sein.“",
+              "flag": "weg1"
+            },
+            {
+              "id": "w2",
+              "text": "Der Jahresabschluss soll verständlich sein.",
+              "reply": "Mira: „Dann trenne laufende Buchungen, GuV und Abschlussarbeiten sauber. Ein Bankbestand ist kein Gewinn.“",
+              "flag": "weg2"
+            }
+          ],
+          "solution": {
+            "choice": "w0",
+            "read": true
+          }
+        },
+        {
+          "id": "ankunft-03",
+          "type": "match",
+          "title": "Wer liefert welche Information?",
+          "prompt": "Ordne die vier Aufgaben den Bereichen des Rechnungswesens zu.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "FiBu dokumentiert externe Geschäftsvorfälle; KLR bereitet innerbetriebliche Kosten und Leistungen auf; Statistik verdichtet Daten; Planung bezieht sich auf zukünftige Mittel und Ziele.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Finanzbuchhaltung"
+            },
+            {
+              "id": "k1",
+              "text": "Kosten- und Leistungsrechnung"
+            },
+            {
+              "id": "k2",
+              "text": "Statistik"
+            },
+            {
+              "id": "k3",
+              "text": "Planung"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Kundenrechnung und Forderung buchen",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Kosten eines bestimmten Auftrags ermitteln",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Umsätze mehrerer Monate vergleichen",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Personal- und Liquiditätsbedarf für 2027 schätzen",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "ankunft-04",
+          "type": "order",
+          "title": "Von der Post zum Konto",
+          "prompt": "Bringe den sinnvollen Bearbeitungsweg in die richtige Reihenfolge.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Erst der Beleg und die Einordnung, dann der Buchungssatz und die nachvollziehbare Kontrolle.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Beleg empfangen und Vollständigkeit prüfen"
+            },
+            {
+              "id": "s1",
+              "text": "Sachverhalt, Beteiligte und Zeitbezug klären"
+            },
+            {
+              "id": "s2",
+              "text": "Konto, Betrag und Steuerregel bestimmen"
+            },
+            {
+              "id": "s3",
+              "text": "Buchung mit eindeutiger Belegreferenz erfassen"
+            },
+            {
+              "id": "s4",
+              "text": "Buchung und Belegzuordnung kontrollieren"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "ankunft-05",
+          "type": "single",
+          "title": "Die Rechnung fehlt",
+          "prompt": "Auf dem Bankkonto erscheint eine Überweisung mit dem Text „Gerät“. Ein Beleg fehlt. Was ist die sachgerechte erste Reaktion?",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Ein Bankumsatz zeigt einen Zahlungsfluss, aber nicht zwingend Lieferung, Zweck, Steuer oder Aktivierung. Ohne ausreichenden Beleg ist zu klären.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Die Zahlung sofort als Betriebsausgabe buchen."
+            },
+            {
+              "id": "b",
+              "text": "Den Beleg und den Geschäftsvorfall klären, bevor kontiert wird."
+            },
+            {
+              "id": "c",
+              "text": "Den Betrag als Umsatz erfassen, weil Bank betroffen ist."
+            },
+            {
+              "id": "d",
+              "text": "Eine Privatentnahme annehmen, damit die Buchung fertig ist."
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "ankunft-06",
+          "type": "multi",
+          "title": "Dokumentation nach GoB",
+          "prompt": "Wähle genau drei praktikable Maßnahmen für eine nachvollziehbare Buchführung.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Ordnung, Nachprüfbarkeit und geordnete Belegbezüge sind zentrale Anforderungen. Eine frei erfundene Buchung oder der bloße Kontoauszug sind kein geeigneter Ersatz für die Sachverhaltsprüfung.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Belege eindeutig und auffindbar einer Buchung zuordnen."
+            },
+            {
+              "id": "b",
+              "text": "Korrekturen nachvollziehbar dokumentieren statt still zu überschreiben."
+            },
+            {
+              "id": "c",
+              "text": "Bei Unklarheit Beträge vorsorglich ohne Beleg auf Verdacht buchen."
+            },
+            {
+              "id": "d",
+              "text": "Geschäftsvorfälle zeitlich und sachlich geordnet erfassen."
+            },
+            {
+              "id": "e",
+              "text": "Zahlungsnachweise grundsätzlich statt aller Rechnungen verwenden."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "ankunft-07",
+          "type": "numbers",
+          "title": "Eingangspost zählen",
+          "prompt": "In der Postbox liegen 24 Dokumente. Sieben sind doppelt abgelegte Kopien und drei sind reine Werbebriefe. Wie viele Dokumente bleiben zur fachlichen Prüfung? Rechne hier nur eine Stückzahl.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "24 − 7 − 3 = 14 Dokumente. Das heißt noch nicht, dass alle 14 automatisch zu buchen sind.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Zu prüfende Dokumente",
+              "answer": 14,
+              "unit": "Stück",
+              "tolerance": 0.001
+            }
+          ],
+          "solution": {
+            "n0": "14"
+          }
+        },
+        {
+          "id": "ankunft-08",
+          "type": "reflect",
+          "title": "Deine erste Übergabenotiz",
+          "prompt": "Erkläre Mira kurz, warum „Keine Buchung ohne Beleg“ mehr bedeutet als das Abheften einer PDF.",
+          "days": [
+            1
+          ],
+          "refs": [
+            {
+              "day": 1,
+              "pages": "Master-Skript, Thema 1"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Ein geeigneter Beleg lässt sich einem konkreten Vorgang zuordnen; Betrag, Leistung, Beteiligte und Zeitbezug müssen erkennbar sein. Bankbewegung und Rechnung werden abgeglichen, statt eine Buchung zu erraten."
+        }
+      ]
+    },
+    {
+      "id": "lager",
+      "title": "Die Nacht im Lager",
+      "subtitle": "Dienstag, 16:40 | Lager und Inventurraum",
+      "room": "projects",
+      "npc": "Eda",
+      "intro": "Am Inventurtag stimmen einige Bestandskarten nicht mit den Regalen überein. Eda braucht eine ordentliche Übersicht der Vermögens- und Schuldposten.",
+      "goal": "Inventur durchführen, Inventar strukturieren und eine fachlich richtige Modellbilanz ableiten.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "lager-01",
+          "type": "inspect",
+          "title": "Bestandsmappe öffnen",
+          "prompt": "Die Werte sind ausdrücklich eine neue, in sich geschlossene Modellbilanz. Lies zuerst die Bestandsermittlung.",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Inventurbogen",
+              "body": "Bank 8.000 €, Kasse 1.200 €, Waren 3.800 €, Büro- und Geschäftsausstattung 15.000 €, Kundenforderungen 7.000 €. Beträge für diese Übung ohne Umsatzsteuer.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Schuldenübersicht",
+              "body": "Lieferantenverbindlichkeiten 6.000 €, Bankdarlehen 11.000 €. Alle Beträge gelten zum selben Stichtag.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Kontrollnachricht",
+              "body": "Ein Regal enthält 115 statt der erwarteten 120 gleichen Artikel. Ein Artikel ist mit 20 € bewertet. Der Fehlbestand muss gesondert untersucht und dokumentiert werden.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "lager-02",
+          "type": "match",
+          "title": "Bilanzpositionen einsortieren",
+          "prompt": "Ordne jeden Posten der passenden Kategorie zu.",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "BGA dient dem Betrieb längerfristig; Waren und Forderungen gehören regelmäßig zum Umlaufvermögen; Darlehen und Lieferantenschulden sind Fremdkapital.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Anlagevermögen"
+            },
+            {
+              "id": "k1",
+              "text": "Umlaufvermögen"
+            },
+            {
+              "id": "k2",
+              "text": "Fremdkapital"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Büro- und Geschäftsausstattung",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Waren im Lager",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Offene Forderung gegen Kundschaft",
+              "answer": "k1"
+            },
+            {
+              "id": "p3",
+              "text": "Bankdarlehen",
+              "answer": "k2"
+            },
+            {
+              "id": "p4",
+              "text": "Lieferantenverbindlichkeit",
+              "answer": "k2"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k1",
+            "p3": "k2",
+            "p4": "k2"
+          }
+        },
+        {
+          "id": "lager-03",
+          "type": "numbers",
+          "title": "Bilanzsumme und Eigenkapital",
+          "prompt": "Ermittle aus den Unterlagen die Summe der Vermögenswerte und das Eigenkapital.",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "8.000 + 1.200 + 3.800 + 15.000 + 7.000 = 35.000 € Vermögen. 6.000 + 11.000 = 17.000 € Fremdkapital; 35.000 − 17.000 = 18.000 € Eigenkapital.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Summe Vermögen",
+              "answer": 35000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Summe Fremdkapital",
+              "answer": 17000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n2",
+              "label": "Eigenkapital",
+              "answer": 18000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "35000",
+            "n1": "17000",
+            "n2": "18000"
+          }
+        },
+        {
+          "id": "lager-04",
+          "type": "single",
+          "title": "Inventur oder Inventar?",
+          "prompt": "Eda zählt die tatsächlich vorhandenen Artikel und dokumentiert deren Bestand. Wie heißt die Tätigkeit?",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Inventur ist die Bestandsaufnahme; das Inventar ist das geordnete Verzeichnis und die Bilanz die verdichtete Gegenüberstellung.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Bilanzierung"
+            },
+            {
+              "id": "b",
+              "text": "Inventur"
+            },
+            {
+              "id": "c",
+              "text": "Inventar"
+            },
+            {
+              "id": "d",
+              "text": "Gewinnermittlung"
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "lager-05",
+          "type": "order",
+          "title": "Der Weg zur Bilanz",
+          "prompt": "Welche Reihenfolge bildet den fachlichen Ablauf ab?",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Von der Inventur gelangt man zum Inventar und zur Bilanz. Die Bilanzgleichung lautet Vermögen = Eigenkapital + Fremdkapital.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Bestände und Schulden feststellen"
+            },
+            {
+              "id": "s1",
+              "text": "Bestände prüfen und bewerten"
+            },
+            {
+              "id": "s2",
+              "text": "Inventar nach Vermögen und Schulden ordnen"
+            },
+            {
+              "id": "s3",
+              "text": "Bilanzposten zusammenfassen"
+            },
+            {
+              "id": "s4",
+              "text": "Eigenkapital und Bilanzgleichheit prüfen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "lager-06",
+          "type": "numbers",
+          "title": "Die fehlenden Lagerartikel",
+          "prompt": "Im Regal liegen 115 statt 120 Stück. Bewertungsansatz 20 € je Stück. Wie groß ist die Bestandsabweichung?",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "Es fehlen 5 Artikel, bewertet mit 5 × 20 € = 100 €. Vor einer Buchung ist die Ursache zu prüfen.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Fehlende Stück",
+              "answer": 5,
+              "unit": "Stück",
+              "tolerance": 0.001
+            },
+            {
+              "id": "n1",
+              "label": "Wert der Inventurdifferenz",
+              "answer": 100,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "5",
+            "n1": "100"
+          }
+        },
+        {
+          "id": "lager-07",
+          "type": "multi",
+          "title": "Was gehört zum Inventar?",
+          "prompt": "Wähle genau drei richtige Aussagen zu Inventur, Inventar und Bilanz.",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Körperliche und buchmäßige Inventur ergänzen sich. Bilanz und Inventar unterscheiden sich im Detaillierungsgrad; Eigenkapital ist ein Reinvermögenswert.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Das Inventar gliedert Vermögensgegenstände und Schulden mit Einzelangaben."
+            },
+            {
+              "id": "b",
+              "text": "Bei einer Bilanz stehen Vermögen auf der Aktiv- und Eigen-/Fremdkapital auf der Passivseite."
+            },
+            {
+              "id": "c",
+              "text": "Ein Inventar ersetzt jede tatsächliche Bestandsaufnahme ohne Prüfung."
+            },
+            {
+              "id": "d",
+              "text": "Bank- und Forderungsbestände können anhand geeigneter Unterlagen nachgewiesen werden."
+            },
+            {
+              "id": "e",
+              "text": "Eigenkapital ist immer identisch mit dem Bankkontostand."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "lager-08",
+          "type": "reflect",
+          "title": "Inventurprotokoll",
+          "prompt": "Warum darf Eda den Fehlbestand von 100 € nicht einfach ignorieren oder heimlich die Liste ändern?",
+          "days": [
+            2
+          ],
+          "refs": [
+            {
+              "day": 2,
+              "pages": "Master-Skript, Thema 2"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Der Istbestand muss nachvollziehbar festgestellt werden. Die Differenz erfordert Klärung und gegebenenfalls eine dokumentierte Bestandskorrektur. Stillschweigende Änderungen würden die Nachprüfbarkeit beeinträchtigen."
+        }
+      ]
+    },
+    {
+      "id": "konten",
+      "title": "Die Spur von Soll und Haben",
+      "subtitle": "Mittwoch, 09:15 | Kontenbüro",
+      "room": "control",
+      "npc": "Lea",
+      "intro": "Die Bilanz aus der Inventur wird in Konten überführt. Im ersten Buchungsstapel tauchen typische Verwechslungen zwischen Aktivtausch und Schuldentilgung auf.",
+      "goal": "Eröffnungsbuchungen, Bilanzveränderungen und das Schlussbilanzkonto verstehen.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "konten-01",
+          "type": "inspect",
+          "title": "Kontenblatt und Vorgänge",
+          "prompt": "Öffne die Arbeitsunterlagen aus dem vereinfachten, umsatzsteuerfreien Übungsabschnitt.",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Kontenauszug Bank",
+              "body": "Anfangsbestand Bank 8.000 €, Zahlungseingang für eine bestehende Forderung 3.500 €, Zahlung einer bestehenden Lieferantenschuld 1.000 €.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Kassenbuch",
+              "body": "Anfangsbestand Kasse 1.200 €, Kauf und Aktivierung eines Bürogeräts bar 300 €, später Einlage von 170 € in die Kasse.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Prüfnotiz",
+              "body": "Ein weiterer Geschäftsvorfall wandelt eine Lieferantenverbindlichkeit in ein Darlehen um, ohne Zahlung. Das ist kein neuer Aufwand.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "konten-02",
+          "type": "match",
+          "title": "Vier Bilanzveränderungen",
+          "prompt": "Ordne die Vorgänge nach ihrer Bilanzwirkung.",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Aktivtausch/Passivtausch verändern nur eine Bilanzseite und nicht die Summe. Mehrung erhöht beide Seiten, Minderung senkt beide Seiten.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Aktivtausch"
+            },
+            {
+              "id": "k1",
+              "text": "Passivtausch"
+            },
+            {
+              "id": "k2",
+              "text": "Aktiv-Passiv-Mehrung"
+            },
+            {
+              "id": "k3",
+              "text": "Aktiv-Passiv-Minderung"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Ein aktivierungspflichtiges Bürogerät wird bar bezahlt.",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Lieferantenverbindlichkeit wird in Darlehen umgewandelt.",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Maschine wird auf Ziel gekauft und aktiviert.",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Bereits gebuchte Lieferantenschuld wird überwiesen.",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "konten-03",
+          "type": "numbers",
+          "title": "Bank und Kasse abstimmen",
+          "prompt": "Berechne die Endbestände des vollständig beschriebenen Kontenauszugs.",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "Bank: 8.000 + 3.500 − 1.000 = 10.500 €. Kasse: 1.200 − 300 + 170 = 1.070 €. Die Berechnung ist für diesen Fall vom anderen Bilanzmodell getrennt.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Banksaldo nach beiden Bewegungen",
+              "answer": 10500,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Kassensaldo nach beiden Bewegungen",
+              "answer": 1070,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "10500",
+            "n1": "1070"
+          }
+        },
+        {
+          "id": "konten-04",
+          "type": "single",
+          "title": "Aktivkonto unter der Lupe",
+          "prompt": "Auf welchem Kontenteil steht bei einem Aktivkonto ein Zugang?",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Ein Aktivkonto nimmt Anfangsbestand und Zugänge im Soll auf; Abgänge werden im Haben erfasst.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Immer im Haben"
+            },
+            {
+              "id": "b",
+              "text": "Im Soll"
+            },
+            {
+              "id": "c",
+              "text": "Nur im SBK"
+            },
+            {
+              "id": "d",
+              "text": "Auf beiden Seiten gleichzeitig"
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "konten-05",
+          "type": "order",
+          "title": "Bilanz in T-Konten",
+          "prompt": "Ordne die vollständige Abfolge eines Rechnungsjahres.",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Das EBK dient zur Eröffnung der Bestandskonten, das SBK ihrem Abschluss. SBK bedeutet ausdrücklich Schlussbilanzkonto.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Anfangsbilanz und Eröffnungsbilanzkonto (EBK) abstimmen"
+            },
+            {
+              "id": "s1",
+              "text": "Bestandskonten mit Anfangsbeständen eröffnen"
+            },
+            {
+              "id": "s2",
+              "text": "Geschäftsvorfälle auf den Bestandskonten buchen"
+            },
+            {
+              "id": "s3",
+              "text": "Bestandskonten zum Schlussbilanzkonto (SBK) abschließen"
+            },
+            {
+              "id": "s4",
+              "text": "Aus dem SBK die Schlussbilanz ableiten"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "konten-06",
+          "type": "multi",
+          "title": "Journal, Hauptbuch, Nebenbuch",
+          "prompt": "Welche drei Aussagen helfen dir bei der Kontenprüfung?",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Journal und Hauptbuch haben unterschiedliche Ordnungszwecke. Personenkonten vertiefen die Sammelkonten. Salden und Sonderfälle sind sachgerecht zu prüfen.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Im Grundbuch/Journal werden Buchungen zeitlich nachvollziehbar erfasst."
+            },
+            {
+              "id": "b",
+              "text": "Das Hauptbuch ordnet Buchungen nach Sachkonten."
+            },
+            {
+              "id": "c",
+              "text": "Das Nebenbuch kann Details zu einzelnen Debitoren und Kreditoren liefern."
+            },
+            {
+              "id": "d",
+              "text": "Ein Bankkonto kann gleichzeitig nur Aktiv- und nie Passivbestände zeigen, unabhängig von Vorzeichen."
+            },
+            {
+              "id": "e",
+              "text": "Ein einzelner Kontoauszug ersetzt die Bilanzprüfung vollständig."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "c"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "id": "konten-07",
+          "type": "numbers",
+          "title": "Restbetrag einer Schuld",
+          "prompt": "Eine bestehende Lieferantenverbindlichkeit über 4.800 € wird teilweise mit 1.250 € überwiesen. Wie viel bleibt offen?",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "4.800 − 1.250 = 3.550 € offene Schuld. Die Zahlung reduziert Bank und Verbindlichkeit; sie schafft nicht noch einmal Aufwand.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Restliche Verbindlichkeit",
+              "answer": 3550,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "3550"
+          }
+        },
+        {
+          "id": "konten-08",
+          "type": "reflect",
+          "title": "Fehler im Buchungsstapel",
+          "prompt": "Formuliere den Unterschied zwischen „BGA an Bank“ und „Verbindlichkeiten an Bank“ anhand der beiden Vorgänge.",
+          "days": [
+            3
+          ],
+          "refs": [
+            {
+              "day": 3,
+              "pages": "Master-Skript, Thema 3"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "BGA an Bank beschreibt den direkt bezahlten und aktivierten Vermögensgegenstand als Aktivtausch. Verbindlichkeiten an Bank tilgt eine bereits erfasste Schuld und führt zur Aktiv-Passiv-Minderung."
+        }
+      ]
+    },
+    {
+      "id": "erfolg",
+      "title": "Das verschwundene Ergebnis",
+      "subtitle": "Donnerstag, 14:20 | Buchhaltung und Geschäftsleitung",
+      "room": "finance",
+      "npc": "Jo",
+      "intro": "BüroWerk meldet ordentliche Umsätze, doch in einer vorbereiteten GuV tauchen private Abhebungen und Materialbestände durcheinander auf.",
+      "goal": "Trenne Aufwand, Ertrag, Bestandsveränderung und Privatvorgang und ermittle das Ergebnis eines Modellmonats.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "erfolg-01",
+          "type": "inspect",
+          "title": "GuV-Entwurf lesen",
+          "prompt": "Diese Monatsrechnung ist eine eigenständige Rechenübung ohne Umsatzsteuer. Öffne alle Angaben.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Monatsbericht",
+              "body": "Umsatzerlöse 25.000 €, Materialaufwand 9.000 €, Miete 4.000 € und Löhne 2.000 €. Weitere Erträge/Aufwendungen bestehen für diese Teilaufgabe nicht.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Privatkonto",
+              "body": "Die Inhaberin hat 1.000 € vom betrieblichen Bankkonto privat entnommen. Außerdem wurden später 2.000 € private Mittel eingelegt. Diese Beträge laufen nicht über die GuV.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Materialakte",
+              "body": "Für eine separate Bestandsveränderungsübung werden 40 fertige Erzeugnisse mit je 50 € Herstellungskosten zusätzlich auf Lager gelegt. Der Aufwand wurde zuvor erfasst; jetzt ist die Bestandsmehrung periodengerecht zu betrachten.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "erfolg-02",
+          "type": "match",
+          "title": "Wirkung klassifizieren",
+          "prompt": "Ordne fünf Vorgänge der passenden Gruppe zu.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Aufwände und Erträge gehen in die GuV ein. Privatvorgänge verändern das Eigenkapital, nicht das Jahresergebnis; reine Schuldentilgung erzeugt keinen zweiten Aufwand.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Aufwand"
+            },
+            {
+              "id": "k1",
+              "text": "Ertrag"
+            },
+            {
+              "id": "k2",
+              "text": "Privatentnahme"
+            },
+            {
+              "id": "k3",
+              "text": "Privateinlage"
+            },
+            {
+              "id": "k4",
+              "text": "Erfolgsneutrale Schuldentilgung"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Büromiete für die aktuelle Periode",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Erbrachte Dienstleistung als Umsatzerlös",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Geld vom betrieblichen Konto für private Zwecke",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Private Mittel ins Unternehmen einzahlen",
+              "answer": "k3"
+            },
+            {
+              "id": "p4",
+              "text": "Lieferantenrechnung aus dem Vormonat bezahlen",
+              "answer": "k4"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3",
+            "p4": "k4"
+          }
+        },
+        {
+          "id": "erfolg-03",
+          "type": "numbers",
+          "title": "Monatsergebnis",
+          "prompt": "Ermittle das Ergebnis anhand der vier Beträge aus dem Monatsbericht. Privatentnahme und -einlage bleiben aus der GuV heraus.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "Aufwand: 9.000 + 4.000 + 2.000 = 15.000 €. Ertrag 25.000 €. Gewinn 25.000 − 15.000 = 10.000 €. Die privaten Bewegungen ändern diesen Gewinn nicht.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Summe der Aufwendungen",
+              "answer": 15000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Monatsgewinn",
+              "answer": 10000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "15000",
+            "n1": "10000"
+          }
+        },
+        {
+          "id": "erfolg-04",
+          "type": "single",
+          "title": "Die private Abhebung",
+          "prompt": "Eine Inhaberin entnimmt 1.000 € für private Einkäufe. Was gilt in diesem vereinfachten Einzelunternehmensfall?",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Die Privatentnahme ist kein betrieblicher Aufwand. Sie mindert das betriebliche Vermögen und das Eigenkapital außerhalb des Periodenerfolgs.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Die Entnahme ist Aufwand in der GuV."
+            },
+            {
+              "id": "b",
+              "text": "Die Entnahme ist kein Aufwand und wird über Privat/Eigenkapital abgewickelt."
+            },
+            {
+              "id": "c",
+              "text": "Die Entnahme ist Umsatzsteuer auf Verkäufe."
+            },
+            {
+              "id": "d",
+              "text": "Die Entnahme wird als Kreditorenschuld gebucht."
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "erfolg-05",
+          "type": "order",
+          "title": "Zum Jahresergebnis",
+          "prompt": "Bring den Abschluss der Erfolgskonten in die Reihenfolge.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Erfolgskonten werden über das GuV-Konto abgeschlossen, bevor das GuV-Ergebnis das Eigenkapital beeinflusst.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Aufwands- und Ertragskonten vollständig abstimmen"
+            },
+            {
+              "id": "s1",
+              "text": "Aufwandskonten an die GuV abschließen"
+            },
+            {
+              "id": "s2",
+              "text": "Ertragskonten an die GuV abschließen"
+            },
+            {
+              "id": "s3",
+              "text": "Gewinn oder Verlust aus dem GuV-Saldo ermitteln"
+            },
+            {
+              "id": "s4",
+              "text": "GuV-Saldo auf das Eigenkapitalkonto übertragen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "erfolg-06",
+          "type": "multi",
+          "title": "Material ist nicht immer Verbrauch",
+          "prompt": "Wähle genau drei fachlich passende Aussagen.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Einkauf, Verbrauch, fertige und unfertige Erzeugnisse sowie Bestandsveränderungen müssen sachgerecht unterschieden werden. Privatvorgänge sind kein Umsatzerlös.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Rohstoffe und Hilfsstoffe sind nach Art und Zweck zu unterscheiden."
+            },
+            {
+              "id": "b",
+              "text": "Fertige Erzeugnisse können am Periodenende als Vorräte vorhanden sein."
+            },
+            {
+              "id": "c",
+              "text": "Jeder Einkauf führt in identischer Höhe zwingend zu Materialverbrauch der Periode."
+            },
+            {
+              "id": "d",
+              "text": "Bestandsveränderungen bei fertigen und unfertigen Erzeugnissen können das Periodenergebnis beeinflussen."
+            },
+            {
+              "id": "e",
+              "text": "Privateinlagen erhöhen in jedem Fall die Umsatzerlöse."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "erfolg-07",
+          "type": "numbers",
+          "title": "Bestandsmehrung fertiger Erzeugnisse",
+          "prompt": "In der separaten Materialakte liegen 40 zusätzlich hergestellte Erzeugnisse mit je 50 € Herstellungskosten auf Lager. Die Herstellungskosten wurden zuvor als Aufwand erfasst. Wie hoch ist die Bestandsmehrung?",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "40 × 50 € = 2.000 €. Die Bestandsmehrung korrigiert die Erfolgsermittlung nach der gewählten Gesamtkosten-Darstellung; sie ist keine Kundeneinzahlung.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Wert der Bestandsmehrung",
+              "answer": 2000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "2000"
+          }
+        },
+        {
+          "id": "erfolg-08",
+          "type": "reflect",
+          "title": "Der Jahresendbericht",
+          "prompt": "Erläutere Mira den Unterschied zwischen Gewinn, Bankbestand und Privatentnahme.",
+          "days": [
+            4
+          ],
+          "refs": [
+            {
+              "day": 4,
+              "pages": "Master-Skript, Thema 4"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Gewinn ergibt sich aus Erträgen und Aufwendungen der Periode, nicht aus allen Ein- und Auszahlungen. Private Entnahmen mindern Vermögen/Eigenkapital außerhalb der GuV; der Bankstand kann daher anders verlaufen als der Gewinn."
+        }
+      ]
+    },
+    {
+      "id": "anlagen",
+      "title": "Die Maschine mit dem Preisschild",
+      "subtitle": "Freitag, 10:35 | Anlageverwaltung",
+      "room": "lab",
+      "npc": "Sam",
+      "intro": "Ein neuer Arbeitsplatz und eine Maschine sollen angeschafft werden. Die Rechnungen sind eingetroffen – doch vor der Buchung müssen Anschaffungskosten und Nutzungsdauer geklärt werden.",
+      "goal": "Beurteile Anlagevermögen, lineare Abschreibung, GWG-Beispiele und den freigegebenen Investitionsrahmen.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "anlagen-01",
+          "type": "inspect",
+          "title": "Investitionsunterlagen lesen",
+          "prompt": "Für diese Aufgaben sind Kaufpreisangaben als Nettowerte bzw. entsprechend bezeichnet. Jeder Teilfall ist abgegrenzt.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Maschinenkarte",
+              "body": "Maschine: Anschaffungskosten 4.800 € netto, Nutzungsdauer 5 Jahre, lineare Abschreibung; vollständiges Kalenderjahr der Nutzung in dieser Übung.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "GWG-Beleg",
+              "body": "Eigenständig nutzbarer Bürostuhl: 595 € brutto bei 19 % Umsatzsteuer, voller Vorsteuerabzug im Modell. Zur Wertgrenzen-Prüfung wird hier der Nettowert verwendet.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Beschaffungsanträge",
+              "body": "Vereinfachtes Budget 6.500 €. A: erforderlicher Laptop 1.200 €, B: erforderliche Maschine 4.800 €, C: optionale Möblierung 2.500 €. Die Preise sind für das Spiel untereinander vergleichbare Nettowerte; eine Annahme zu Nutzwert und Folgekosten gilt nur für diese Auswahlübung.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "anlagen-02",
+          "type": "numbers",
+          "title": "AfA einer Maschine",
+          "prompt": "Berechne die lineare Jahresabschreibung und den Buchwert am Ende des zweiten vollen Nutzungsjahres. Keine Sonderabschreibung, keine Restwerte.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "4.800 € / 5 Jahre = 960 € pro vollem Jahr. Nach zwei Jahren sind 1.920 € abgeschrieben; Restbuchwert 2.880 €.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Lineare AfA je vollem Jahr",
+              "answer": 960,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Buchwert nach zwei Jahren",
+              "answer": 2880,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "960",
+            "n1": "2880"
+          }
+        },
+        {
+          "id": "anlagen-03",
+          "type": "single",
+          "title": "GWG und Vorsteuer",
+          "prompt": "Ein eigenständig nutzbarer Stuhl kostet 595 € brutto bei 19 % Umsatzsteuer; voller Vorsteuerabzug. Welcher Wert ist in diesem Fall für den Vergleich mit der GWG-Netto-Grenze relevant?",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "595 / 1,19 = 500 € netto und 95 € Vorsteuer. Die Grenzprüfung verwendet hier den maßgeblichen Nettowert; konkrete Aktivierungs- und Wahlrechte bleiben davon zu unterscheiden.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "595 € Bruttoentgelt"
+            },
+            {
+              "id": "b",
+              "text": "500 € Nettoentgelt"
+            },
+            {
+              "id": "c",
+              "text": "95 € Vorsteuer"
+            },
+            {
+              "id": "d",
+              "text": "595 € zuzüglich Vorsteuer"
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "anlagen-04",
+          "type": "match",
+          "title": "Vermögenswert oder Aufwand?",
+          "prompt": "Ordne die Sachverhalte für eine einfache handels- und steuerrechtliche Erstprüfung ein.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Anschaffung und Wertverzehr sind getrennte Ereignisse. Die Maschine wird zunächst aktiviert und über die Nutzungsdauer abgeschrieben; die Miete belastet die zugehörige Periode.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Anlagevermögen"
+            },
+            {
+              "id": "k1",
+              "text": "Laufender Aufwand"
+            },
+            {
+              "id": "k2",
+              "text": "Abschreibungsaufwand"
+            },
+            {
+              "id": "k3",
+              "text": "Umsatzerlös"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Anschaffung einer länger nutzbaren aktivierungspflichtigen Maschine",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Periodenbezogene Miete eines Büros",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Planmäßiger Wertverzehr einer Maschine",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Verkauf von Büroartikeln als gewöhnlicher Geschäftsbetrieb",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "anlagen-05",
+          "type": "multi",
+          "title": "Belegprüfung der Anlage",
+          "prompt": "Welche drei Aussagen sind fachlich tragfähig?",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Für AfA sind Anschaffungskosten, Nutzungsdauer und Nutzungsbeginn maßgeblich. Die GWG-Regeln sind ein eigenständiger Prüfungsschritt; Aktivierung ist keine sofortige Vollabschreibung.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Die Anschaffungskosten und die betriebsgewöhnliche Nutzungsdauer sind zu dokumentieren."
+            },
+            {
+              "id": "b",
+              "text": "Voller Vorsteuerabzug kann die Abgrenzung zwischen Brutto- und Nettoanschaffungskosten beeinflussen."
+            },
+            {
+              "id": "c",
+              "text": "Das Anschaffungsdatum spielt bei der AfA nie eine Rolle."
+            },
+            {
+              "id": "d",
+              "text": "Ein GWG-Fall ist anhand aktueller gesetzlicher Voraussetzungen und Wahlrechte zu prüfen."
+            },
+            {
+              "id": "e",
+              "text": "Eine aktivierte Maschine erzeugt im Anschaffungsmonat immer einen Aufwand in Höhe des gesamten Kaufpreises."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "anlagen-06",
+          "type": "portfolio",
+          "title": "Die Budgetentscheidung",
+          "prompt": "Der Beschaffungsplan erlaubt maximal 6.500 €. Laptop A und Maschine B sind im Fall erforderlich, Möblierung C kann verschoben werden. Wähle die sachgerechte Kombination; die technische Auswertung kommt erst am Schluss.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Vergleiche den genehmigten Rahmen, erforderliche Geräte und optionales Vorhaben.",
+          "explanation": "A + B = 6.000 €, damit bleiben 500 € frei. Zusätzlich C ergäbe 8.500 € und überschritte den Rahmen. Dies ist eine Fallentscheidung unter den genannten Annahmen, keine universell beste Unternehmensstrategie.",
+          "points": 6,
+          "items": [
+            {
+              "id": "a",
+              "name": "A | Laptop für die Buchhaltung",
+              "price": 1200
+            },
+            {
+              "id": "b",
+              "name": "B | Maschine im Lager",
+              "price": 4800
+            },
+            {
+              "id": "c",
+              "name": "C | Optionale Möblierung",
+              "price": 2500
+            }
+          ],
+          "budget": 6500,
+          "required": [
+            "a",
+            "b"
+          ],
+          "solution": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "anlagen-07",
+          "type": "order",
+          "title": "Anlage richtig erfassen",
+          "prompt": "Ordne die Schritte vom Beleg bis zur laufenden AfA.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Erst die Aktivierungs- und Wertansatzprüfung, dann Nutzungsdauer, Anlagenverzeichnis und Abschreibung.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Rechnung und betriebliche Nutzung prüfen"
+            },
+            {
+              "id": "s1",
+              "text": "Anschaffungskosten und Vorsteuerbehandlung klären"
+            },
+            {
+              "id": "s2",
+              "text": "Aktivierung beziehungsweise GWG-Behandlung bestimmen"
+            },
+            {
+              "id": "s3",
+              "text": "Anlagenverzeichnis mit Nutzungsdauer und Startdatum führen"
+            },
+            {
+              "id": "s4",
+              "text": "Planmäßige Abschreibung nach geltender Methode buchen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "anlagen-08",
+          "type": "reflect",
+          "title": "Die Kurznotiz für Sam",
+          "prompt": "Begründe, warum die Maschine nicht einfach bei Zahlung voll als laufender Aufwand erfasst werden darf.",
+          "days": [
+            5
+          ],
+          "refs": [
+            {
+              "day": 5,
+              "pages": "Master-Skript, Thema 5"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Der Kauf einer aktivierungspflichtigen Maschine schafft Vermögen; die planmäßige Abschreibung verteilt deren Werteverzehr über die Nutzungsdauer. Die Auszahlung ist davon zu trennen. Konkrete GWG-Wahlrechte sind gesondert zu prüfen."
+        }
+      ]
+    },
+    {
+      "id": "opos",
+      "title": "Der Fall der offenen Rechnungen",
+      "subtitle": "Montag, 11:00 | Kunden- und Lieferantenbüro",
+      "room": "meeting",
+      "npc": "Lea",
+      "intro": "Eine Kundin hat nur einen Teil ihrer Rechnung bezahlt. Gleichzeitig mahnt der Lieferant, obwohl eine Zahlung eingegangen ist. Lea braucht eine OPOS-Liste, die wirklich stimmt.",
+      "goal": "Verknüpfe Rechnungen und Zahlungen, unterscheide Debitor und Kreditor und verhindere Doppelbuchungen.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "opos-01",
+          "type": "inspect",
+          "title": "Zwei offene Posten",
+          "prompt": "Lies die Rechnungsliste und die Bankbewegungen. Für diesen Fall sind die Rechnungen bereits mit Steuer erfasst.",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Kundenrechnung AR-106",
+              "body": "BüroWerk hat 2.000 € netto zuzüglich 380 € Umsatzsteuer fakturiert. Forderung: 2.380 € brutto. Die Kundin hat bislang 1.200 € bezahlt.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Lieferantenrechnung ER-207",
+              "body": "Materialeinkauf 1.000 € netto + 190 € Vorsteuer. Verbindlichkeit: 1.190 € brutto. An den Lieferanten wurden bislang 500 € überwiesen.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Abstimmhinweis",
+              "body": "Beide Rechnungen und ihre Teilzahlungen sind im Modell korrekt nach Rechnungsnummer zugeordnet. Zahlungsbeträge erzeugen weder einen zweiten Umsatzerlös noch einen zweiten Materialaufwand.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "opos-02",
+          "type": "numbers",
+          "title": "Restbeträge der OPOS-Liste",
+          "prompt": "Berechne die offenen Bruttorechnungsbeträge nach den erfassten Teilzahlungen.",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "Kundin: 2.380 − 1.200 = 1.180 €. Lieferant: 1.190 − 500 = 690 €. Vorsteuer und Umsatzsteuer sind durch die ursprünglichen Rechnungen bereits modelliert.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Restforderung Kundin",
+              "answer": 1180,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Restverbindlichkeit Lieferant",
+              "answer": 690,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "1180",
+            "n1": "690"
+          }
+        },
+        {
+          "id": "opos-03",
+          "type": "match",
+          "title": "Was ist Debitor, was Kreditor?",
+          "prompt": "Ordne die Vorgänge zur buchhalterischen Sicht von BüroWerk.",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Debitoren sind offene Kundenforderungen, Kreditoren offene Lieferantenschulden. Die Bankbewegungen gleichen jeweils die bestehenden Posten teilweise aus.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Debitor / Forderung"
+            },
+            {
+              "id": "k1",
+              "text": "Kreditor / Verbindlichkeit"
+            },
+            {
+              "id": "k2",
+              "text": "Zahlungseingang / Forderungsausgleich"
+            },
+            {
+              "id": "k3",
+              "text": "Zahlungsausgang / Verbindlichkeitsausgleich"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Die Kundin schuldet uns 1.180 €.",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Wir schulden dem Lieferanten 690 €.",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Die Kundin zahlt 300 € auf die bestehende Rechnung.",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Wir überweisen 250 € auf die bestehende Lieferantenrechnung.",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "opos-04",
+          "type": "single",
+          "title": "Zahlung ist kein neuer Umsatz",
+          "prompt": "Die Kundin bezahlt einen offenen Teilbetrag auf AR-106. Welche Wirkung ist richtig?",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Bei einer zuvor erfassten Ausgangsrechnung führt die Zahlung zum Forderungsausgleich. Sie ist kein zweiter Umsatzerlös.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Der Umsatzerlös entsteht bei jeder Teilzahlung nochmals."
+            },
+            {
+              "id": "b",
+              "text": "Die Bank steigt, die Forderung sinkt; der bereits gebuchte Umsatz entsteht nicht erneut."
+            },
+            {
+              "id": "c",
+              "text": "Die Zahlung erhöht das Darlehen."
+            },
+            {
+              "id": "d",
+              "text": "Die Zahlung ist eine Privateinlage."
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "opos-05",
+          "type": "order",
+          "title": "Einen OP richtig ausgleichen",
+          "prompt": "Ordne den sachgerechten Arbeitsablauf.",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Die Zuordnung muss nachvollziehbar sein; Teilzahlungen lassen offene Restposten stehen, und Personenkonto und Sammelkonto müssen übereinstimmen.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Rechnung und Personenkonto identifizieren"
+            },
+            {
+              "id": "s1",
+              "text": "Zahlung und Verwendungszweck prüfen"
+            },
+            {
+              "id": "s2",
+              "text": "Zahlung der passenden Rechnungsnummer zuordnen"
+            },
+            {
+              "id": "s3",
+              "text": "Restbetrag und Zahlungsstatus neu ermitteln"
+            },
+            {
+              "id": "s4",
+              "text": "Sammelkonto, Nebenbuch und Bank abstimmen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "opos-06",
+          "type": "multi",
+          "title": "OPOS-Fehlerdetektiv",
+          "prompt": "Welche drei Aussagen sind für eine OPOS-Kontrolle sinnvoll?",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Die Zuordnung benötigt Belegbezug, Fälligkeit und Abgleich. Teilzahlungen schließen nur den beglichenen Teil, und eine Zahlung erzeugt keine zusätzlichen Erträge.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Fälligkeitsdatum und Zahlungsstatus je Rechnung prüfen."
+            },
+            {
+              "id": "b",
+              "text": "Rechnungsnummer und Bankbezug für die Zuordnung nutzen."
+            },
+            {
+              "id": "c",
+              "text": "Einen Zahlungseingang immer noch einmal als neuen Erlös erfassen."
+            },
+            {
+              "id": "d",
+              "text": "Personenkontensalden mit Sammelkonten abstimmen."
+            },
+            {
+              "id": "e",
+              "text": "Eine Teilzahlung schließt die gesamte Rechnung automatisch ab."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "opos-07",
+          "type": "numbers",
+          "title": "Skonto richtig teilen",
+          "prompt": "Neue, eigenständige Rechnung: 1.190 € brutto (1.000 € netto + 190 € USt). Bei rechtzeitiger Zahlung werden 2 % Skonto auf den Rechnungsbetrag gewährt. Wie viel wird tatsächlich bezahlt und wie hoch ist die Steuerkorrektur?",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "2 % von 1.190 € = 23,80 € Skonto brutto; Zahlung 1.166,20 €. Die enthaltene Umsatzsteuerkorrektur beträgt 23,80 × 19/119 = 3,80 €. Das ist keine zweite Rechnung.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Skontobetrag brutto",
+              "answer": 23.8,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Tatsächliche Zahlung",
+              "answer": 1166.2,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n2",
+              "label": "Umsatzsteuer-/Vorsteuerkorrektur",
+              "answer": 3.8,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "23.8",
+            "n1": "1166.2",
+            "n2": "3.8"
+          }
+        },
+        {
+          "id": "opos-08",
+          "type": "reflect",
+          "title": "Bericht an Lea",
+          "prompt": "Warum ist die Zuordnung von Teilzahlungen zur richtigen Rechnung wichtiger als nur ein passender Bankendbestand?",
+          "days": [
+            6
+          ],
+          "refs": [
+            {
+              "day": 6,
+              "pages": "Master-Skript, Thema 6"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Nur die richtige Belegzuordnung zeigt, welche Kundin und welcher Lieferant noch offene Beträge haben. Bank, Personenkonten und Sammelkonten müssen nachprüfbar zueinander passen."
+        }
+      ]
+    },
+    {
+      "id": "steuer",
+      "title": "Der Steuerprüfer im Postfach",
+      "subtitle": "Dienstag, 09:05 | Steuerakte",
+      "room": "finance",
+      "npc": "Jo",
+      "intro": "Die erste Umsatzsteuer-Voranmeldung des Modellbetriebs wird vorbereitet. Einige Rechnungen sind netto, andere brutto ausgewiesen. Ein Kollege möchte die Steuer doppelt erfassen.",
+      "goal": "Bestimme Netto/Brutto, Vorsteuer und Umsatzsteuer, ohne den Zahlungsvorgang mit dem Ertrag zu verwechseln.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "steuer-01",
+          "type": "inspect",
+          "title": "Steuerakte öffnen",
+          "prompt": "Im vereinfachten Fall gilt Regelbesteuerung, Sollversteuerung, inländische Leistungen und voller Vorsteuerabzug aus ordnungsgemäßen Rechnungen.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Ausgangsrechnung",
+              "body": "Dienstleistung über 2.000 € netto; im Unterrichtsfall steuerpflichtig mit 19 % USt. Der Bruttobetrag beträgt 2.380 €.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Eingangsrechnungen",
+              "body": "Abziehbare Vorsteuer laut korrekt geprüften Eingangsrechnungen: 190 €. Geschuldete Umsatzsteuer aus dem vereinfachten Monatsfall: 570 €.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Steuerschlüsselhinweis",
+              "body": "SKR04 kann Automatikkonten und DATEV-Steuerschlüssel verwenden. Der richtige Steuerausweis darf nicht durch zusätzliche manuelle Steuerbuchung doppelt entstehen.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "steuer-02",
+          "type": "numbers",
+          "title": "Brutto in Netto zerlegen",
+          "prompt": "Eine der Dienstleistungen kostet 2.380 € brutto bei 19 % Umsatzsteuer. Ermittle die Nettobasis und die Steuer.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "2.380 / 1,19 = 2.000 € netto; 2.380 − 2.000 = 380 € Umsatzsteuer.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Nettoentgelt",
+              "answer": 2000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Enthaltene Umsatzsteuer",
+              "answer": 380,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "2000",
+            "n1": "380"
+          }
+        },
+        {
+          "id": "steuer-03",
+          "type": "match",
+          "title": "Was ist Umsatzsteuer, was Vorsteuer?",
+          "prompt": "Ordne die Modellvorgänge sachgerecht zu.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Umsatzsteuer entsteht hier auf Ausgangsumsätze, Vorsteuer kann bei entsprechenden Voraussetzungen abgezogen werden. Die Differenz ergibt die Zahllast; Kundenzahlungen werden gesondert gebucht.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Geschuldete Umsatzsteuer"
+            },
+            {
+              "id": "k1",
+              "text": "Abziehbare Vorsteuer"
+            },
+            {
+              "id": "k2",
+              "text": "Zahllast"
+            },
+            {
+              "id": "k3",
+              "text": "Forderungsausgleich"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Steuer auf steuerpflichtige Ausgangsleistung",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Abziehbare Steuer aus einer betrieblichen Eingangsrechnung",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Verbleibende Differenz zugunsten des Finanzamts",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Wird eine ordnungsgemäß verbuchte Kundenforderung später bezahlt",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "steuer-04",
+          "type": "multi",
+          "title": "Die Steuerlogik prüfen",
+          "prompt": "Wähle genau drei richtige Aussagen zum vereinfachten Regelbesteuerungsfall.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "19 % von 100 € = 19 €. USt ist kein Nettoerlös; Vorsteuerabzug benötigt Voraussetzungen. Der ermäßigte Satz ist an gesetzliche Tatbestände gebunden.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Vorsteuer setzt die gesetzlichen Voraussetzungen voraus und ist nicht bei jeder Zahlung automatisch abziehbar."
+            },
+            {
+              "id": "b",
+              "text": "Bei einem Nettobetrag von 100 € und 19 % USt beträgt das Bruttoentgelt 119 €."
+            },
+            {
+              "id": "c",
+              "text": "Umsatzsteuer ist bei einem regelbesteuerten Unternehmen in jedem Fall Umsatzerlös."
+            },
+            {
+              "id": "d",
+              "text": "Ein Vorsteuerüberschuss kann zu einem Erstattungs- oder Verrechnungsanspruch führen."
+            },
+            {
+              "id": "e",
+              "text": "Der Steuersatz 7 % darf aus Kulanz für beliebige steuerpflichtige Produkte gewählt werden."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "steuer-05",
+          "type": "numbers",
+          "title": "Umsatzsteuerzahllast berechnen",
+          "prompt": "Für den isolierten Voranmeldungsfall wurden 570 € geschuldete Umsatzsteuer und 190 € abziehbare Vorsteuer festgestellt.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "570 € Umsatzsteuer − 190 € Vorsteuer = 380 € Zahllast. Die Werte gehören zu genau dieser Abrechnungsperiode.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Umsatzsteuerzahllast",
+              "answer": 380,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "380"
+          }
+        },
+        {
+          "id": "steuer-06",
+          "type": "order",
+          "title": "Vom Beleg zur Voranmeldung",
+          "prompt": "Welche fachliche Bearbeitungsfolge ist sinnvoll?",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Die Verrechnung ergibt nur Sinn, wenn die zugrunde liegenden Geschäftsvorfälle fachlich korrekt erfasst sind.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Steuerbarkeit und Steuerpflicht des Vorgangs klären"
+            },
+            {
+              "id": "s1",
+              "text": "Anwendbaren Steuersatz und Rechnungsangaben prüfen"
+            },
+            {
+              "id": "s2",
+              "text": "Nettoentgelt und Steuer richtig in der Buchführung erfassen"
+            },
+            {
+              "id": "s3",
+              "text": "Geschuldete Umsatzsteuer und abziehbare Vorsteuer abstimmen"
+            },
+            {
+              "id": "s4",
+              "text": "Die ermittelte Voranmeldung prüfen und fristgerecht abgeben"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "steuer-07",
+          "type": "single",
+          "title": "DATEV-Automatikfalle",
+          "prompt": "Ein korrekt verwendetes Automatikkonto führt die Umsatzsteuer bereits aus. Wie geht BüroWerk vor?",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Bei aktivem Automatikkonto muss die automatisch ausgelöste Steuerbuchung geprüft, nicht blind wiederholt werden.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Die gleiche Steuer vorsichtshalber zusätzlich manuell buchen."
+            },
+            {
+              "id": "b",
+              "text": "Die Steuerautomatik kontrollieren, aber keine doppelte Steuerbuchung erzeugen."
+            },
+            {
+              "id": "c",
+              "text": "Die Vorsteuer der Eingangsrechnung als Umsatz erfassen."
+            },
+            {
+              "id": "d",
+              "text": "Den Betrag ohne Beleg ändern."
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "steuer-08",
+          "type": "reflect",
+          "title": "Deine Steuer-Übergabe",
+          "prompt": "Formuliere, warum Ausgangsumsatz, Vorsteuer und Bankzahlung drei unterschiedliche Prüfgegenstände sind.",
+          "days": [
+            7
+          ],
+          "refs": [
+            {
+              "day": 7,
+              "pages": "Master-Skript, Thema 7"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Umsatz ist der Ertrag ohne geschuldete Umsatzsteuer, Vorsteuer stammt aus abzugsfähigen Eingangsleistungen. Zahlung betrifft Bank und gegebenenfalls OPOS, während Steuerentstehung und Zahlungstermin getrennt zu untersuchen sind."
+        }
+      ]
+    },
+    {
+      "id": "abschluss",
+      "title": "Die Nacht vor dem Abschluss",
+      "subtitle": "Mittwoch, 18:20 | Abschlussbüro",
+      "room": "control",
+      "npc": "Mira",
+      "intro": "Das Geschäftsjahr endet. Versicherungsbeiträge reichen ins Folgejahr, ein Kunde zahlt für künftige Leistungen, und ein Prozessrisiko ist noch nicht abschließend geklärt.",
+      "goal": "Ordne Perioden, Rückstellungen und Vorratswerte sauber zu und bereite eine begründete Abschlussnotiz vor.",
+      "minutes": 13,
+      "tasks": [
+        {
+          "id": "abschluss-01",
+          "type": "inspect",
+          "title": "Die Abschlussmappe",
+          "prompt": "Hier sind drei ausdrücklich getrennte, vollständig beschriebene Modellfälle.",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Versicherung",
+              "body": "BüroWerk bezahlt am 01.10.2026 eine Jahresversicherung über 1.200 € für den Zeitraum bis 30.09.2027. Gleichmäßiger monatlicher Aufwand, im Fall ohne Umsatzsteuer.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Servicevertrag",
+              "body": "BüroWerk erhält am 01.12.2026 2.400 € netto im Voraus für eine gleichmäßige Dienstleistung von Dezember 2026 bis Mai 2027. Umsatzsteuer bleibt in dieser Abgrenzungsübung außen vor.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Prozessakte und Wareneinkauf",
+              "body": "Ein mögliches Prozessrisiko begründet bei erfüllten Ansatzvoraussetzungen eine wahrscheinlich bestehende Verpflichtung mit geschätzten 4.000 €. Separater Durchschnittsfall: 10 Einheiten zu 20 € und 20 Einheiten zu 30 €; 15 Einheiten verbleiben im Bestand.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "abschluss-02",
+          "type": "numbers",
+          "title": "Aktive Rechnungsabgrenzung",
+          "prompt": "Wieviel der bereits gezahlten Jahresversicherung betrifft die neun Monate Januar bis September 2027?",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "1.200 € / 12 = 100 € pro Monat; Oktober–Dezember 2026 = 300 € Aufwand, die 9 Monate 2027 = 900 € aktiver Rechnungsabgrenzungsposten.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Versicherungsaufwand 2026",
+              "answer": 300,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "ARAP zum 31.12.2026",
+              "answer": 900,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "300",
+            "n1": "900"
+          }
+        },
+        {
+          "id": "abschluss-03",
+          "type": "numbers",
+          "title": "Passive Rechnungsabgrenzung",
+          "prompt": "Welcher Teil der Vorauszahlung entfällt auf 2026 und welcher auf 2027?",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "2.400 € / 6 = 400 € pro Monat; Dezember 2026 = 400 € Ertrag, Januar–Mai 2027 = 2.000 € passiver Rechnungsabgrenzungsposten.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Ertrag 2026",
+              "answer": 400,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "PRAP zum 31.12.2026",
+              "answer": 2000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "400",
+            "n1": "2000"
+          }
+        },
+        {
+          "id": "abschluss-04",
+          "type": "match",
+          "title": "RAP oder etwas anderes?",
+          "prompt": "Ordne die Sachverhalte für die vereinfacht beschriebenen Fälle zu.",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "ARAP/PRAP setzen einen bestimmten Zeitraum nach dem Stichtag bei vorgezogener Ausgabe/Einnahme voraus. Eine bereits entstandene Forderung oder ungewisse Verpflichtung ist etwas anderes.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "ARAP"
+            },
+            {
+              "id": "k1",
+              "text": "PRAP"
+            },
+            {
+              "id": "k2",
+              "text": "Forderung / sonstiger Vermögensposten"
+            },
+            {
+              "id": "k3",
+              "text": "Rückstellung"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Vorausbezahlte Jahresversicherung für die Zeit nach dem Stichtag",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Vorab erhaltenes Entgelt für Leistungen nach dem Stichtag",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Bereits erbrachte Leistung, Rechnung steht noch aus",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Wahrscheinliche ungewisse Verpflichtung mit schätzbarer Höhe",
+              "answer": "k3"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3"
+          }
+        },
+        {
+          "id": "abschluss-05",
+          "type": "single",
+          "title": "Rückstellung oder Verbindlichkeit?",
+          "prompt": "Ein Gerichtsstreit führt nach den Fallannahmen zu einer wahrscheinlich bestehenden Verpflichtung; der Betrag ist nur schätzbar. Welche Position ist grundsätzlich zu prüfen?",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Bei einer ungewissen, wahrscheinlich bestehenden Verpflichtung kann nach § 249 HGB eine Rückstellung erforderlich sein; die konkreten Ansatz- und Bewertungsbedingungen sind zu prüfen.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Ein Umsatzerlös"
+            },
+            {
+              "id": "b",
+              "text": "Eine Rückstellung nach den einschlägigen Ansatzvoraussetzungen"
+            },
+            {
+              "id": "c",
+              "text": "Ein aktiver Rechnungsabgrenzungsposten"
+            },
+            {
+              "id": "d",
+              "text": "Eine Privatentnahme"
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "abschluss-06",
+          "type": "numbers",
+          "title": "Vorratsbewertung im Modell",
+          "prompt": "Eine einzelne gleichartige Warenart wurde in zwei Chargen erworben: 10 Stück zu je 20 € und 20 Stück zu je 30 €. Mit der **einfachen gewogenen Durchschnittsmethode** werden 15 noch vorhandene Stück bewertet. Verwende ungerundete Zwischenwerte.",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "Gesamtkosten 10×20 + 20×30 = 800 €. Menge 30. Durchschnitt 26,666… € je Stück; 15 Stück × 800/30 = 400 €. Es ist eine didaktische Modellrechnung, keine pauschale Aussage über handelsrechtlich zulässige Wertansätze.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Gewogener Durchschnittspreis",
+              "answer": 26.666666666666668,
+              "unit": "Euro/Stück",
+              "tolerance": 0.015
+            },
+            {
+              "id": "n1",
+              "label": "Wert der 15 verbleibenden Stück",
+              "answer": 400,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "26.67",
+            "n1": "400"
+          }
+        },
+        {
+          "id": "abschluss-07",
+          "type": "order",
+          "title": "Abschlusscheck vor Unterschrift",
+          "prompt": "Ordne die sinnvoll aufeinander aufbauenden Prüfungsschritte.",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Zunächst Vollständigkeit, dann stichtags- und periodenbezogene Korrekturen und am Schluss die Ergebnis-/Bilanzabstimmung.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Buchungs- und Belegvollständigkeit kontrollieren"
+            },
+            {
+              "id": "s1",
+              "text": "Stichtagsbestände und offene Posten abstimmen"
+            },
+            {
+              "id": "s2",
+              "text": "Periodenabgrenzungen und Rückstellungen prüfen"
+            },
+            {
+              "id": "s3",
+              "text": "Abschreibungen und Bewertungssachverhalte prüfen"
+            },
+            {
+              "id": "s4",
+              "text": "GuV, SBK und Abschlussauswertungen auf Plausibilität prüfen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "abschluss-08",
+          "type": "reflect",
+          "title": "Deine Abschlussnotiz",
+          "prompt": "Erkläre in eigenen Worten, warum Gewinn und Zahlungsdatum auseinanderfallen können und warum nicht jede Abgrenzung automatisch ein RAP ist.",
+          "days": [
+            8
+          ],
+          "refs": [
+            {
+              "day": 8,
+              "pages": "Master-Skript, Thema 8"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Aufwand und Ertrag sind der wirtschaftlich richtigen Periode zuzuordnen. RAP braucht einen bestimmten Zeitbezug und die vor dem Stichtag liegende Ausgabe/Einnahme; sonstige Forderungen, Verbindlichkeiten und Rückstellungen sind jeweils gesondert zu beurteilen."
+        }
+      ]
+    },
+    {
+      "id": "datev",
+      "title": "Der letzte Buchungsstapel",
+      "subtitle": "Donnerstag, 09:00 | DATEV-Trainingsbüro",
+      "room": "board",
+      "npc": "Sam",
+      "intro": "Zum Abschluss der Mission prüft Sam die Buchungsdaten im Schulungsmandanten. In einer DATEV-nahen Übungsmaske tauchen Rechnungen, Steuerautomatik und Zahlungen zusammen auf.",
+      "goal": "Prüfe Beleg und Buchungszeile, ordne OPOS, Bank und Kasse zu und entscheide über die Freigabe des Stapels.",
+      "minutes": 14,
+      "tasks": [
+        {
+          "id": "datev-01",
+          "type": "inspect",
+          "title": "Trainingsmandant und Belegstapel",
+          "prompt": "Dies ist eine frei gestaltete Lernsimulation mit DATEV-orientierten Fachbegriffen, keine echte DATEV-Kanzlei-Rechnungswesen-Sitzung.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Öffne jedes Dokument, bevor du den Schritt abschließt.",
+          "explanation": "Alle Dokumente sind Modellunterlagen. Die Sichtung erhält keine Fachpunkte.",
+          "points": 0,
+          "evidence": [
+            {
+              "id": "d0",
+              "title": "Eingangsrechnung ER-009",
+              "body": "Bürowaren 1.000 € netto und 190 € Vorsteuer; Lieferantenschuld 1.190 € brutto, Zahlung später. Rechnung erfüllt die hier erforderlichen Angaben.",
+              "kind": "akte"
+            },
+            {
+              "id": "d1",
+              "title": "Ausgangsrechnung AR-009",
+              "body": "Leistung 2.000 € netto und 380 € Umsatzsteuer; Kunde schuldet 2.380 € brutto. Zahlung erst später.",
+              "kind": "nachricht"
+            },
+            {
+              "id": "d2",
+              "title": "Zahlung und Kontrolle",
+              "body": "Ein anderer, bereits offener Posten beträgt 1.190 €; darauf treffen 700 € Teilzahlung ein. Im Schulungsfall gilt Sollbesteuerung, voller Vorsteuerabzug bei ordnungsgemäßen Rechnungen und 19 % Regelsteuersatz.",
+              "kind": "notiz"
+            }
+          ],
+          "solution": [
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "datev-02",
+          "type": "match",
+          "title": "Die Felder der Buchungszeile",
+          "prompt": "Ordne die Funktion den Feld-/Bereichsbezeichnungen zu. Die reale DATEV-Maske und Version kann anders angeordnet sein.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Trenne Zweck und wirtschaftliche Wirkung der Vorgänge.",
+          "explanation": "Eine Buchungszeile benötigt nachvollziehbare Beträge, Konten, Steuer- und Belegbezüge. Die hier benannten Funktionen folgen dem ReWe1-DATEV-Master, nicht einem garantierten UI-Stand.",
+          "points": 8,
+          "categories": [
+            {
+              "id": "k0",
+              "text": "Umsatz"
+            },
+            {
+              "id": "k1",
+              "text": "Soll/Haben (S/H)"
+            },
+            {
+              "id": "k2",
+              "text": "Konto"
+            },
+            {
+              "id": "k3",
+              "text": "Gegenkonto"
+            },
+            {
+              "id": "k4",
+              "text": "BU"
+            },
+            {
+              "id": "k5",
+              "text": "Belegfeld / Buchungstext"
+            }
+          ],
+          "pairs": [
+            {
+              "id": "p0",
+              "text": "Betrag des Geschäftsvorfalls",
+              "answer": "k0"
+            },
+            {
+              "id": "p1",
+              "text": "Seite der Buchung des Feldes Konto",
+              "answer": "k1"
+            },
+            {
+              "id": "p2",
+              "text": "Sach- oder Personenkonto der Buchung",
+              "answer": "k2"
+            },
+            {
+              "id": "p3",
+              "text": "Korrespondierendes Buchungskonto",
+              "answer": "k3"
+            },
+            {
+              "id": "p4",
+              "text": "Steuerkennzeichen / Buchungsschlüssel, wenn erforderlich",
+              "answer": "k4"
+            },
+            {
+              "id": "p5",
+              "text": "Nachvollziehbarer Bezug zur Rechnung",
+              "answer": "k5"
+            }
+          ],
+          "solution": {
+            "p0": "k0",
+            "p1": "k1",
+            "p2": "k2",
+            "p3": "k3",
+            "p4": "k4",
+            "p5": "k5"
+          }
+        },
+        {
+          "id": "datev-03",
+          "type": "numbers",
+          "title": "Eingangsrechnung aufteilen",
+          "prompt": "Aus einer ordnungsgemäßen Eingangsrechnung über 1.190 € brutto bei 19 % USt werden Nettoentgelt und abziehbare Vorsteuer ermittelt.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "1.190 / 1,19 = 1.000 €. Enthaltene Vorsteuer = 190 €. Der Kreditor steht mit 1.190 € im Offenen Posten, die Vorsteuer nur einmal.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Warenwert netto",
+              "answer": 1000,
+              "unit": "Euro",
+              "tolerance": 0.011
+            },
+            {
+              "id": "n1",
+              "label": "Vorsteuer",
+              "answer": 190,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "1000",
+            "n1": "190"
+          }
+        },
+        {
+          "id": "datev-04",
+          "type": "single",
+          "title": "Steuerautomatik im Buchungsstapel",
+          "prompt": "Ein DATEV-Automatikkonto ermittelt im konkreten Fall die Steuer bereits zutreffend. Was ist zu tun?",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Vergleiche den konkreten Geschäftsvorfall mit den Grundregeln.",
+          "explanation": "Bei zutreffend angewandter DATEV-Steuerautomatik wird Steuer nicht zusätzlich von Hand erneut gebucht; Beleg-/Steuerschlüssel und Sachverhalt werden dennoch geprüft.",
+          "points": 4,
+          "options": [
+            {
+              "id": "a",
+              "text": "Die Steuer zusätzlich als zweite manuelle Steuerbuchung erfassen."
+            },
+            {
+              "id": "b",
+              "text": "Die Automatik und Belegangaben kontrollieren; keine Steuer doppelt erfassen."
+            },
+            {
+              "id": "c",
+              "text": "Den Buchungstext weglassen, weil Automatik genügt."
+            },
+            {
+              "id": "d",
+              "text": "Für jeden Bankumsatz grundsätzlich Umsatzsteuer berechnen."
+            }
+          ],
+          "correct": "b",
+          "solution": "b"
+        },
+        {
+          "id": "datev-05",
+          "type": "multi",
+          "title": "Stapel vor Freigabe kontrollieren",
+          "prompt": "Wähle genau drei sinnvolle Kontrollen vor der Freigabe eines Übungsstapels.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Prüfe jede Aussage einzeln; gesucht ist die vollständige Menge.",
+          "explanation": "Ein prüfbarer Stapel benötigt Belegbezug, richtige Kontierung, Steuer und OPOS/Bank/Kasse-Abstimmung. Offene Posten werden nicht ohne passende Zahlung ausgeglichen.",
+          "points": 6,
+          "options": [
+            {
+              "id": "a",
+              "text": "Belegreferenz und Buchungstext stimmen zum Sachverhalt."
+            },
+            {
+              "id": "b",
+              "text": "Personenkonto, Gegenkonto und Steuerbehandlung sind plausibel."
+            },
+            {
+              "id": "c",
+              "text": "Fällige Rechnungen gelten automatisch als bezahlt."
+            },
+            {
+              "id": "d",
+              "text": "OPOS, Bank und Kasse sind plausibel abgestimmt."
+            },
+            {
+              "id": "e",
+              "text": "Ein falscher Buchungssatz wird ohne Dokumentation durch Überschreiben der Historie verdeckt."
+            }
+          ],
+          "correct": [
+            "a",
+            "b",
+            "d"
+          ],
+          "solution": [
+            "a",
+            "b",
+            "d"
+          ]
+        },
+        {
+          "id": "datev-06",
+          "type": "order",
+          "title": "DATEV-Praxisablauf",
+          "prompt": "Bringe die Arbeitsschritte der simulierten Buchungspraxis in die richtige Reihenfolge.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Achte darauf, welcher Schritt die Grundlage für den nächsten ist.",
+          "explanation": "Die fachliche Belegprüfung geht der Eingabe voraus. Zahlung, OPOS und Stapelkontrolle folgen nachvollziehbar. Die Maske ist eine eigenständige Lernoberfläche.",
+          "points": 6,
+          "items": [
+            {
+              "id": "s0",
+              "text": "Beleg empfangen und auf Sachverhalt und Angaben prüfen"
+            },
+            {
+              "id": "s1",
+              "text": "Konto, Gegenkonto, Betrag und gegebenenfalls BU bestimmen"
+            },
+            {
+              "id": "s2",
+              "text": "Buchung mit Belegnummer/Buchungstext erfassen und prüfen"
+            },
+            {
+              "id": "s3",
+              "text": "Bank-/Kassenbewegung einem offenen Posten zuordnen"
+            },
+            {
+              "id": "s4",
+              "text": "Stapel, Steuer und OPOS kontrollieren und erst danach abschließen"
+            }
+          ],
+          "order": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "solution": [
+            "s0",
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ]
+        },
+        {
+          "id": "datev-07",
+          "type": "numbers",
+          "title": "Letzter offener Posten",
+          "prompt": "Ein bereits korrekt gebuchter offener Posten von 1.190 € wird mit 700 € teilweise bezahlt. Errechne den Restbetrag.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Stelle zuerst fest, welche Größen im Sachverhalt tatsächlich zusammengehören.",
+          "explanation": "1.190 − 700 = 490 € bleiben offen. Eine Teilzahlung ist kein automatischer vollständiger Ausgleich und kein erneuter Umsatzerlös.",
+          "points": 8,
+          "fields": [
+            {
+              "id": "n0",
+              "label": "Restlicher offener Posten",
+              "answer": 490,
+              "unit": "Euro",
+              "tolerance": 0.011
+            }
+          ],
+          "solution": {
+            "n0": "490"
+          }
+        },
+        {
+          "id": "datev-08",
+          "type": "reflect",
+          "title": "Deine Abschlussmeldung an die Geschäftsführung",
+          "prompt": "Berichte, welche Kontrollen du vor der Abgabe eines DATEV-orientierten Übungsstapels durchgeführt hättest. Nenne mindestens drei unterschiedliche Prüfpunkte.",
+          "days": [
+            9
+          ],
+          "refs": [
+            {
+              "day": 9,
+              "pages": "Master-Skript, Thema 9"
+            }
+          ],
+          "help": "Nenne Befund, Ursache beziehungsweise offenen Prüfpunkt und eine sachgerechte Entscheidung.",
+          "explanation": "Freie Begründungen werden gespeichert und erst in der Abschlussbesprechung fachlich betrachtet.",
+          "points": 0,
+          "minChars": 55,
+          "solution": "Ich prüfe Belegangaben und Sachverhalt, SKR04-Konto und Gegenkonto, steuerliche Behandlung/Automatik, Buchungstext und Rechnungsnummer sowie OPOS-Abstimmung zu Bank/Kasse. Unklare Belege markiere ich zur Klärung."
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "title": "Beleg und Buchungsweg",
+      "text": "Beleg prüfen → Sachverhalt und Periode klären → Konten/Steuer bestimmen → buchen → kontrollieren. Rechnung und Bankbewegung sind unterschiedliche Nachweise."
+    },
+    {
+      "title": "Inventur, Inventar, Bilanz",
+      "text": "Inventur = Bestandsaufnahme. Inventar = vollständiges Verzeichnis. Bilanz = verdichtete Gegenüberstellung. Vermögen = Eigenkapital + Fremdkapital."
+    },
+    {
+      "title": "Soll und Haben",
+      "text": "Aktivkonto: Anfangsbestand/Zugang im Soll, Abgang im Haben. Passivkonto: Anfangsbestand/Zugang im Haben, Abgang im Soll. EBK eröffnet Bestandskonten, SBK schließt sie ab."
+    },
+    {
+      "title": "Buchungsgrundlagen",
+      "text": "Buchungssatz: Soll an Haben. Aktivtausch: Aktiv +/−, Passivtausch: Passiv +/−, Aktiv-Passiv-Mehrung/Minderung: beide Seiten steigen/sinken."
+    },
+    {
+      "title": "GuV und Privat",
+      "text": "Gewinn oder Verlust = Erträge − Aufwendungen derselben Periode. Privatentnahme/Privateinlage gehören beim Einzelunternehmen nicht in die GuV. Bestandsveränderungen fertiger/unfertiger Erzeugnisse sind periodengerecht zu berücksichtigen."
+    },
+    {
+      "title": "AfA und GWG",
+      "text": "Lineare Jahres-AfA = Anschaffungskosten / betriebsgewöhnliche Nutzungsdauer; bei zeitanteiliger Nutzung anteilig. GWG setzt eigene Voraussetzungen und aktuelle Grenzen/Wahlrechte voraus."
+    },
+    {
+      "title": "Personenkonten/OPOS",
+      "text": "Forderung: Kundschaft schuldet uns Geld (Debitor). Verbindlichkeit: Wir schulden Lieferant Geld (Kreditor). Rest-OP = Rechnungssumme − zugeordnete Zahlungen/Korrekturen."
+    },
+    {
+      "title": "Netto, Brutto, Umsatzsteuer",
+      "text": "Bei 19 %: Brutto = Netto × 1,19; Netto = Brutto / 1,19; enthaltene Steuer = Brutto × (19/119). USt-Zahllast = geschuldete USt − abziehbare Vorsteuer."
+    },
+    {
+      "title": "ARAP/PRAP",
+      "text": "ARAP: Ausgabe vor dem Stichtag für Aufwand einer bestimmten späteren Zeit. PRAP: Einnahme vor dem Stichtag für Ertrag einer bestimmten späteren Zeit. Nicht jede Abgrenzung ist ein RAP."
+    },
+    {
+      "title": "Rückstellungen und Bewertung",
+      "text": "Rückstellung nach Ansatzvoraussetzungen für ungewisse Verbindlichkeiten (HGB § 249). Gewogener Durchschnitt = gesamte Anschaffungskosten der gleichen Ware / gesamte Menge; Einzelfallregeln beachten."
+    },
+    {
+      "title": "DATEV-Praxis",
+      "text": "Buchungszeile: Umsatz, S/H, Konto, Gegenkonto, BU, Belegfeld, Buchungstext. Bei DATEV-Automatikkonten Steuer nicht zusätzlich doppelt buchen. Die Simulation ersetzt keine echte DATEV-Software."
+    }
+  ],
+  "sources": [
+    {
+      "day": 1,
+      "name": "ReWe1_01_Master_Einfuehrung_Rechnungswesen_SKR04_2026.pdf",
+      "driveId": "1ixFOYDU7A9NuwWTTw7sFGiic5ezXFNjS",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1ixFOYDU7A9NuwWTTw7sFGiic5ezXFNjS/view"
+    },
+    {
+      "day": 2,
+      "name": "ReWe1_02_Master_Inventur_Inventar_Bilanz_SKR04_2026.pdf",
+      "driveId": "1jclmP1zSBMaUaFPUEDbtKqImL-O5u09x",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1jclmP1zSBMaUaFPUEDbtKqImL-O5u09x/view"
+    },
+    {
+      "day": 3,
+      "name": "ReWe1_03_Master_Bestandskonten_EBK_SBK_SKR04_2026.pdf",
+      "driveId": "1EucUKZguSgnJYttwWob7FLHNUkpf4a7s",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1EucUKZguSgnJYttwWob7FLHNUkpf4a7s/view"
+    },
+    {
+      "day": 4,
+      "name": "ReWe1_04_Master_Erfolgskonten_GuV_Privat_SKR04_2026.pdf",
+      "driveId": "1mRgyhj5NOA_YTIVfMYmXpmDR3dZRi84w",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1mRgyhj5NOA_YTIVfMYmXpmDR3dZRi84w/view"
+    },
+    {
+      "day": 5,
+      "name": "ReWe1_05_Master_Abschreibung_GWG_Anlagevermoegen_SKR04_2026.pdf",
+      "driveId": "1GLCoenhkRjI4Cht_FKd2prc8BIm9NQng",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1GLCoenhkRjI4Cht_FKd2prc8BIm9NQng/view"
+    },
+    {
+      "day": 6,
+      "name": "ReWe1_06_Master_Forderungen_Verbindlichkeiten_Personenkonten_SKR04_2026.pdf",
+      "driveId": "13ENEMb5Ti9a06Mq0vkzc25bFFKyd_1qg",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/13ENEMb5Ti9a06Mq0vkzc25bFFKyd_1qg/view"
+    },
+    {
+      "day": 7,
+      "name": "ReWe1_07_Master_Umsatzsteuer_Vorsteuer_SKR04_2026.pdf",
+      "driveId": "1E3swwHqUtl-HGFt5UpKejN0wo1e-2k-h",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1E3swwHqUtl-HGFt5UpKejN0wo1e-2k-h/view"
+    },
+    {
+      "day": 8,
+      "name": "ReWe1_08_Master_Abgrenzung_Rueckstellungen_Bewertung_SKR04_2026.pdf",
+      "driveId": "1ykLNhaUs0RQeYLA0OxNQEnj8hnR_v13i",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1ykLNhaUs0RQeYLA0OxNQEnj8hnR_v13i/view"
+    },
+    {
+      "day": 9,
+      "name": "ReWe1_09_Master_DATEV_Praxis_SKR04_2026.pdf",
+      "driveId": "1LNo9NSrdHyeFp2i82zmxuyS7_C5uGgwf",
+      "revision": "November 2026, aktuelles Master",
+      "url": "https://drive.google.com/file/d/1LNo9NSrdHyeFp2i82zmxuyS7_C5uGgwf/view"
+    }
+  ],
+  "npcs": {
+    "Mira": {
+      "role": "Geschäftsführung",
+      "avatar": {
+        "skin": 1,
+        "hair": 3,
+        "hairColor": 2,
+        "outfit": 1,
+        "accessory": 1
+      }
+    },
+    "Alex": {
+      "role": "Vertrieb",
+      "avatar": {
+        "skin": 2,
+        "hair": 0,
+        "hairColor": 0,
+        "outfit": 2,
+        "accessory": 0
+      }
+    },
+    "Eda": {
+      "role": "Lager und Inventur",
+      "avatar": {
+        "skin": 4,
+        "hair": 4,
+        "hairColor": 0,
+        "outfit": 3,
+        "accessory": 1
+      }
+    },
+    "Lea": {
+      "role": "Finanzbuchhaltung und OPOS",
+      "avatar": {
+        "skin": 0,
+        "hair": 2,
+        "hairColor": 3,
+        "outfit": 6,
+        "accessory": 1
+      }
+    },
+    "Sam": {
+      "role": "Anlagenbuchführung und DATEV-Praxis",
+      "avatar": {
+        "skin": 3,
+        "hair": 1,
+        "hairColor": 1,
+        "outfit": 0,
+        "accessory": 0
+      }
+    },
+    "Jo": {
+      "role": "Rechnungswesen und Steuer",
+      "avatar": {
+        "skin": 1,
+        "hair": 5,
+        "hairColor": 4,
+        "outfit": 7,
+        "accessory": 1
+      }
+    }
+  },
+  "limitations": [
+    "BüroWerk e.K. und sämtliche Geldbeträge sind fiktive, ausdrücklich voneinander abgegrenzte Unterrichts-Modellfälle.",
+    "Maßgebliche fachliche Quelle: die neun aktiven ReWe1-2026-Masterskripte aus Google Drive, nicht historische Alt-Quizze.",
+    "Aktiver Buchungsrahmen ausschließlich SKR04; im DATEV-Modul keine Lexware-Anwendung.",
+    "Freie Begründungen und persönliche Gesprächsschwerpunkte werden nicht automatisch fachlich benotet.",
+    "Die drei SVG-Bildmodi sind verschiedene illustrative Stile (Comic, 2,5D, Adventure) bei gleicher Bedienung, keine echte 3D-Engine.",
+    "Die vollständigen Lösungen sind in der eigenständigen HTML technisch enthalten und erst am Ende sichtbar. Kein fälschungssicheres Prüfungssystem.",
+    "Die Browserlaufzeit von 90–120 Minuten ist didaktisches Ziel, nicht durch Klassenmessung bewiesen.",
+    "Die DATEV-nahe Maske ist eine eigenständige Lernsimulation, keine echte DATEV-Software und kein identischer Bildschirmnachbau."
+  ]
+}
