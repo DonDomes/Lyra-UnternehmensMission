@@ -1,0 +1,31 @@
+{
+  "filename": "LYRA_UnternehmensMission_ReWe1_BueroWerk_SKR04_2026_v1.html",
+  "sha256": "f7f27076e2d4f9e01d767651cfc3961e6c77802a58042e738cb88c27b4ae684f",
+  "sizeBytes": 195679,
+  "chapters": 9,
+  "tasks": 72,
+  "points": 352,
+  "taskTypes": {
+    "inspect": 9,
+    "dialogue": 1,
+    "match": 9,
+    "order": 9,
+    "single": 9,
+    "multi": 8,
+    "numbers": 17,
+    "reflect": 9,
+    "portfolio": 1
+  },
+  "sources": [
+    "1ixFOYDU7A9NuwWTTw7sFGiic5ezXFNjS",
+    "1jclmP1zSBMaUaFPUEDbtKqImL-O5u09x",
+    "1EucUKZguSgnJYttwWob7FLHNUkpf4a7s",
+    "1mRgyhj5NOA_YTIVfMYmXpmDR3dZRi84w",
+    "1GLCoenhkRjI4Cht_FKd2prc8BIm9NQng",
+    "13ENEMb5Ti9a06Mq0vkzc25bFFKyd_1qg",
+    "1E3swwHqUtl-HGFt5UpKejN0wo1e-2k-h",
+    "1ykLNhaUs0RQeYLA0OxNQEnj8hnR_v13i",
+    "1LNo9NSrdHyeFp2i82zmxuyS7_C5uGgwf"
+  ],
+  "baseFile": "LYRA_UnternehmensMission_ProServa_Tag01-13_v1__LPRV_ReWe5-UnternehmensMission_20261111-102301_0e8e4c4f.html"
+}
