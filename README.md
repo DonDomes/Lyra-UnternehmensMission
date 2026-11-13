@@ -1,5 +1,34 @@
 # LYRA – UnternehmensMission
 
+## Verfügbare Offline-Spiele
+
+| Fachbereich | Einzeldatei | Status |
+| --- | --- | --- |
+| **ReWe1 · SKR04 · Module 01–09** | [BüroWerk – 72 Schritte, 9 Kapitel](dist/LYRA_UnternehmensMission_ReWe1_BueroWerk_SKR04_2026_v1.html) | HTML gebaut; Kern- und DOM-Browsertests bestanden; echter lokaler Dateistart auf Endgeräten offen |
+| **ReWe5 · Controlling · Tag 01–13** | [ProServa – archivierte Original-HTML](archive/ReWe5/LYRA_UnternehmensMission_ProServa_Tag01-13_v1__LPRV_ReWe5-UnternehmensMission_20261111-102301_0e8e4c4f.html) | Vorhandenes ursprüngliches Artefakt unverändert im Repo gesichert; keine neue ReWe5-Fachfreigabe in diesem Lauf |
+
+**ReWe1-Umfang:** eine vollständig offlinefähige HTML-Datei; 72 Schritte, 352 mögliche Fachpunkte, Teilpunkte ohne Minuspunkte, neun Kapitel, drei rein optische Grafikmodi, Charaktereditor und JSON-Spielstand. Vollständige Musterlösungen erst nach bestätigtem Abschluss. Die geplante Spielzeit beträgt ca. 90–120 Minuten und ist noch nicht in einer Lerngruppe gemessen.
+
+### Reproduzierbare ReWe1-Entwicklung
+
+```bash
+python3 scripts/build.py
+node tests/test_core.cjs
+# optional: python3 tests/test_browser_inline.py  (Playwright/Chromium benötigt)
+```
+
+- [Fachkonzept, Quellen, Wiederverwendung und QA-Grenzen](docs/REWE1_MISSION_2026-11-13.md)
+- [Unterrichts-/Endgeräte-Testanleitung](docs/TESTANLEITUNG.md)
+- [Szenen, Aufgaben, Lösungsschlüssel](src/rewe1-mission.json)
+- [Spielvorlage mit Engine und SVG](src/mission-template.html)
+- [Reproduzierbarer Generator](scripts/build.py)
+- [Erstellungs-/Prüfmanifest](manifest.json)
+
+**ReWe1-Build-SHA-256:** `f7f27076e2d4f9e01d767651cfc3961e6c77802a58042e738cb88c27b4ae684f`. Die vollständige HTML wurde über GitHub erstellt und anschließend mit den übertragenen Bytes abgeglichen. Der ReWe5-Altbuild wurde ebenfalls bytegenau übernommen. Beide bilden eigenständige Releases; ein ReWe1-Build überschreibt nicht ReWe5.
+
+---
+
+
 Zentrales Repository für die **LYRA-UnternehmensMission** als eigenständige, offlinefähige HTML-Lernabenteuer. Projektbereiche werden fachlich getrennt gehalten: **ReWe1 (Buchführung, SKR04)** und **ReWe5 (Controlling)**.
 
 ## Verbindliche ReWe1-Entscheidungen (13.11.2026)
@@ -28,6 +57,6 @@ Zentrales Repository für die **LYRA-UnternehmensMission** als eigenständige, o
 
 Die Entwicklung verwendet einen getrennten, validierbaren Fragen-/Szenendatensatz und einen gemeinsamen Spielkern. Aus den Quellen wird ein **einzelnes Standalone-HTML** gebaut. Quellfassungen, Tests, Prüfnachweise und datierte Entscheidungen werden im Repository versioniert; nichts aus anderen Repositories wird überschrieben.
 
-**Stand:** Quellen- und Architekturaufnahme abgeschlossen. Dateien und Testergebnisse werden ausschließlich dann als implementiert/bestanden bezeichnet, wenn sie im Repository bzw. als Ausführung nachweisbar sind.
+**Stand:** ReWe1 v1 im Repository gespeichert und als reproduzierbarer Stand getestet. Originales ReWe5-HTML als eigenständiger Archivstand erhalten. Der echte Endgeräte-Check des heruntergeladenen HTMLs bleibt offen.
 
 > Hinweis: Eine im HTML enthaltene Lösungstabelle ist durch den Ablauf verdeckt, aber in einer Offline-Datei nicht kryptographisch geheim. Die Mission ist ein Lernspiel und keine manipulationssichere Prüfung.
