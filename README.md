@@ -46,6 +46,10 @@ Zentrales Repository für die **LYRA-UnternehmensMission** als eigenständige, o
 
 ## Repositories als Referenz
 
+**Erweiterte Sichtung vom 13.11.2026:** [Auswahlmatrix für alle 16 sichtbaren Repositories und priorisierte Ausbaukandidaten](docs/REPO_AUSWAHL_2026-11-13__LPRV_UnternehmensMission-Repoauswahl_20261113-120933_12229dfa.md). Zusätzlich berücksichtigt: DMS, DVBS-Homepage, Local/Bridge/Core, Skills, Geld, Berlin und Bio. Quellenbefunde und eigene Erweiterungsideen sind getrennt dokumentiert.
+
+**Status:** Dokumentation ergänzt; diese Sichtung ändert die ausgelieferten HTMLs nicht. Suchbare Lernhilfe, Belegakte und zusätzliche Integritätsprüfungen sind Kandidaten, keine bereits eingebauten Funktionen.
+
 - [Lyra-Quiz](https://github.com/DonDomes/Lyra-Quiz): UI-/Teilbewertungs-/Qualitätsprinzipien aus V7.1, keine unverifizierte 1:1-Engineübernahme.
 - [Rewe1](https://github.com/DonDomes/Rewe1): Projektregelwerk, SKR04 und Kursstruktur; aktueller Drive-MASTER_Status 12.11.2026 hat Vorrang vor der älteren Repo-README.
 - [Rewe5](https://github.com/DonDomes/Rewe5): Spiel-/Rollenspielkonzepte, als getrennte Fachrichtung.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_name_original": "REPO_AUSWAHL_2026-11-13.md",
+  "artifact_name_provenance": "REPO_AUSWAHL_2026-11-13__LPRV_UnternehmensMission-Repoauswahl_20261113-120933_12229dfa.md",
+  "created_at_utc": "2026-11-13T11:09:33.467173Z",
+  "created_at_local": "2026-11-13T12:09:33.467173+01:00",
+  "timezone": "Europe/Berlin",
+  "project": "Unterricht-Arbeit/Lyra-UnternehmensMission",
+  "chat_title": null,
+  "instance_label": "UnternehmensMission-Repoauswahl",
+  "instance_label_source": "inferred_visible_context",
+  "platform_chat_id": null,
+  "run_id": "12229dfa-a78f-4580-bd63-fb9493ec81f7",
+  "creating_skills": [
+    "lyra-development-orchestrator",
+    "lyra-critic",
+    "lyra-artifact-provenance"
+  ],
+  "source_refs": [
+    "https://github.com/DonDomes/Lyra-UnternehmensMission/tree/0a95622f563217b1170b0f90b21d2d4203100a20"
+  ],
+  "operation": "generated",
+  "sha256": "f6eaf3a286344bf7862e756aa0687eeb3da7200982ebb79d42c250669c4d5b45",
+  "size_bytes": 12341,
+  "provenance_limitations": [
+    "Platform chat ID was not exposed to this run; instance_label is not an internal ChatGPT conversation identifier.",
+    "Instance label was inferred from visible current-chat context, not read from platform metadata."
+  ]
+}
